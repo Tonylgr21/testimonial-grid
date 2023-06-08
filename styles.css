@@ -2,24 +2,13 @@ html {
     background-color: hsl(210, 46%, 95%);
     box-sizing: border-box;
     font-family: Barlow Semi Condensed, sans-serif;
+    font-size: 13px;
 }
 body {
     min-height: 100vh;
     display: grid;
     place-items: center;
 }
-
-
-.blocks-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
-    margin-inline: 5rem;
-    padding-block: 2rem;
-
-}
-
-
 ul {
     list-style: none;
 }
@@ -30,17 +19,47 @@ ul {
     margin-right: -1rem;
 }
 
+.blocks-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-inline: 10rem;
+    padding-block: 2rem;
+}
+
+
+/* OVERALL BLOCK VALUES */
 
 .quote-block {
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
     border-radius: 10px;
     color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+.quote-block h2 {
+    color: white;
+    font-weight: 500;
+    line-height: 2rem;
+    font-size: 1.6rem;
+}
+
+.quote-block p {
+    color: hsl(0, 0%, 81%);
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+}
+
+/* POSITION OF DIFFERENT BLOCKS INSIDE GRID CONTAINER */
+
 .quote-block:first-child {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+}
+
+.quote-block:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 .quote-block:last-child {
     grid-column-start: 4;
@@ -48,29 +67,13 @@ ul {
     grid-row-end: 3;
 }
 
-.quote-block:nth-child(4) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-.quote-block h2 {
-    color: white;
-    font-weight: 500;
-    line-height: 2.4rem;
-    font-size: 2.2rem;
-    width: 95%;
-}
+/* PERSONS STYLING SECTIONS */
 
-.quote-block p {
-    color: hsl(0, 0%, 81%);
-    font-weight: 400;
-    line-height: 1.6rem;
-    font-size: 1.4rem;
-    
-}
 .person-info {
     display: flex;
     align-items: center;
     margin-top: -1rem;
+    margin-bottom: -1rem;
 }
 .name {
     font-weight: 500;
@@ -92,6 +95,9 @@ ul {
     font-weight: 200;
     font-size: 0.9rem;
 }
+
+/* INTERNAL ALIGNING AND STYLING OF EACH BLOCK */
+
 .daniel {
     background-color: hsl(263, 55%, 52%);
     background-image: url(assets/images/bg-pattern-quotation.svg);
@@ -130,3 +136,65 @@ ul {
     color: hsl(216, 6%, 35%)
 }
 
+/* MEDIA QUERIES */
+/* MEDIUM SCREEN */
+@media (max-width: 80rem) {
+    .blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-inline: 6rem;
+        padding-block: 2rem;
+    }
+    .quote-block:first-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .quote-block:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .quote-block:last-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}
+
+/* SMALL DEVICES  */
+
+@media (max-width: 50rem) {
+    .blocks-grid {
+        grid-template-columns: 1fr;
+        margin-inline: 2rem;
+        padding-block: 2rem;
+    }
+    .quote-block:first-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .quote-block:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .quote-block:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .quote-block:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .quote-block:last-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+}
