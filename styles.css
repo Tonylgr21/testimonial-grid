@@ -1,0 +1,132 @@
+html {
+    background-color: hsl(210, 46%, 95%);
+    box-sizing: border-box;
+    font-family: Barlow Semi Condensed, sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+.blocks-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-inline: 5rem;
+    padding-block: 2rem;
+
+}
+
+
+ul {
+    list-style: none;
+}
+.personal-image {
+    height: 2.6rem;
+    border-radius: 50%;
+    border: 1.5px solid hsl(0, 0%, 81%);
+    margin-right: -1rem;
+}
+
+
+.quote-block {
+    padding: 2rem 3rem 2rem 3rem;
+    border-radius: 10px;
+    color: white;
+}
+.quote-block:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.quote-block:last-child {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.quote-block:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.quote-block h2 {
+    color: white;
+    font-weight: 500;
+    line-height: 2.4rem;
+    font-size: 2.2rem;
+    width: 95%;
+}
+
+.quote-block p {
+    color: hsl(0, 0%, 81%);
+    font-weight: 400;
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+    
+}
+.person-info {
+    display: flex;
+    align-items: center;
+    margin-top: -1rem;
+}
+.name {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+.name-kira, .name-jeanette {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+.graduate {
+    color: hsl(0, 0%, 81%);
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+.graduate-kira, .graduate-jeanette {
+    color: hsl(0, 0%, 81%);
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+.daniel {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(assets/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: 80% 0%;
+}
+.jonathan {
+    background-color: hsl(217, 19%, 35%);
+}
+.jeanette {
+    background-color: hsl(0, 0%, 100%);
+}
+.jeanette h2, .name-jeanette {
+    color: hsl(219, 29%, 14%);
+}
+.name-jeanette {
+    margin-bottom: 0.3rem;
+}
+.jeanette p, .graduate-jeanette{
+    color: hsl(216, 6%, 35%);
+}
+.patrick {
+    background-color: hsl(219, 29%, 14%);
+}
+.kira {
+    background-color: hsl(0, 0%, 100%);
+}
+.kira h2, .name-kira {
+    color: hsl(219, 29%, 14%);;
+}
+.name-kira {
+    margin-bottom: 0.3rem;
+}
+.kira p, .graduate-kira {
+    color: hsl(216, 6%, 35%)
+}
+
